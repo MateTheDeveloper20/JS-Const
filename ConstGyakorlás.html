@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<p>Az eredmény
+
+</p>
+
+<p id="eredmeny">Eredmeny:</p>
+<p id="kisebb">Kisseb</p>
+<p id="nagyobb">nagyobb</p>
+<p id="atlag">Átlag</p>
+
+
+
+<button onclick="dobas()">Dobj A kockával</button>
+
+<script>
+    
+    var a = 10;
+    var b = -3.2;
+    var c = 5;
+    
+    console.log(Math.round(b));
+    console.log(Math.round(c));
+    console.log(Math.round(12.423287));
+
+    console.log(Math.sign(a));
+    console.log(Math.sign(b));
+    console.log(Math.sign(0));
+    console.log(Math.PI);
+
+    console.log(Math.sqrt(25));
+
+    console.log(Math.min(5, 2, 22, -400));
+    console.log(Math.random());
+
+
+    
+    function dobas(){
+        var szam = Math.round(Math.random() * 5 + 1);
+        var MasikSzam = Math.round(Math.random() * 5 + 1);
+        
+       
+         var nagyobb = Math.max(szam, MasikSzam);
+    document.getElementById("nagyobb").innerHTML
+    = "A nagyobb Szám:" + nagyobb;
+
+    var atlag = (szam + MasikSzam) /2;
+    document.getElementById("atlag").innerHTML
+    = "A Két dobás átlaga:" + atlag;
+
+    var kisebb = Math.min(szam + MasikSzam);
+    document.getElementById("kisebb").innerHTML
+    = "A kisseb szám:" + kisebb;
+
+    var eredmeny = Math.round(Math.random() * 5 + 1);
+        var MasikSzam = Math.round(Math.random() * 5 + 1);
+        document.getElementById("eredmeny").innerHTML = szam + "," + MasikSzam;
+
+
+    }
+
+    
+
+</script>
+
+
+
+</body>
+</html>
